@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Sign Up</title>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../js/jquery.mobile-1.4.3.min.css" />
+<link rel="stylesheet" href="../css/stylesheet.css" />
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/jquery.mobile-1.4.3.min.js"></script>
+    
+</head>
+    
+<body>
+    <div data-role="page" class="ui-black category">
+        
+    <div class="ui-header-blk" data-role="header" data-position="right" text-position="center"></div>
+        
+    <div role="main" class="ui-content">
+    <div class="sign">
+    <br>
+    <center><img class="display" src="../images/Red-Carpet-logo.png"/></center>
+    <br>
+    <br>
+    <br> 
+        <input name="FName" id="Name" placeholder="First Name" value="" type="text">
+        <input name="LName" id="Name" placeholder="Last name" value="" type="text">
+        <input data-clear-btn="true" name="email" id="email" placeholder="Email" value="" type="email">
+        <input data-clear-btn="false" name="Password" id="Password" placeholder="Password" value="" autocomplete="off" type="password">
+        
+    <div class="ui-field-contain">
+        <label>
+            <input name="checkbox-agree" type="checkbox">I agree with terms and condition
+        </label>
+        <center>
+            <a href="../html/signin.html" data-transition="none" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" onclick="alert('Congratulations, you have successfully created an account with us!')" style="color:white; background-color:#ed1c24;border:none;text-shadow:none;font-family:'Segoe UI'">Submit</a>
+        </center>
+    </div>  
+    </div>
+    </div>
+    </div>
+</body>
+</html>

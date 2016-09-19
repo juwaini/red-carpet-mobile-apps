@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="js/jquery.mobile-1.4.3.min.css" />
+        <link rel="stylesheet" href="css/stylesheet.css" />
+        
+        <!-- Import js files -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.3.min.js"></script>
+        <script src="js/engine.js"></script>
+
+        <title>Red Carpet</title>
+    </head>
+
+    <body>
+
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Front Page -->
+        <div data-role="page" id="front_page">
+
+            <!-- Page Content -->
+            <div role="main" class="ui-content category">
+                <br>
+                <center><img class="ui-display" src="img/RC-logo.PNG" alt="Clixster"/></center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div class="no-shadow">
+                    <center><img class="no-shadow" src="img/clixster.png" alt="Clixster"/></center>
+                </div>
+
+                <br>
+                <center>
+                    <a href="#signin_page" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" 
+                       style="color:#bc1e24; background-color:white;text-shadow:none">Login</a>
+                    <a href="#checkNbr_page" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" 
+                       style="color:#bc1e24; background-color:white;text-shadow:none">Signup</a>
+                </center>
+
+            </div> <!-- /content -->
+
+        </div> <!-- /page -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Check Number Page -->
+        <div data-role="page" id="checkNbr_page">
+
+            <!-- Page content -->
+            <div role="main" class="ui-content category">
+
+                <div class="sign"> <!-- Black background -->
+                    <br>
+                    <br>
+                    <center><img class="display" src="img/RC-logo.PNG"/></center>
+                    <br>
+                    <br>
+                    <br>
+                    <label for="HphoneNo" style="color:white;text-shadow:none">Enter Mobile Number:</label>
+                    <input name="HphoneNo" id="HphoneN" placeholder="Handphone Number" value="" type="tel">
+                    <label for="RegNo" style="color:white;text-shadow:none">Enter Registration code:</label>
+                    <input name="RegNo" id="RegNo" placeholder="Registration Code" value="" type="text">   
+                    <div>
+                        <br>
+                        <br>
+                        <center>
+                            <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline" id="btnCheckNbr"
+                               style="color:white; background-color:#ed1c24;border:none;text-shadow:none">Send Registration Code</a>
+                        </center>
+                        <center><a href="#signup_page" id="btnNext" data-transition="none" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" 
+                                   style="color:white; background-color:#ed1c24;border:none;text-shadow:none">Next</a></center>
+                    </div>
+
+                </div>
+            </div> <!-- /content -->
+
+        </div> <!-- /page -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Signup Page -->
+        <div id="signup_page" data-role="page" class="page">
+
+            <!-- Header -->
+            <div class="ui-header-blk" data-role="header"></div>
+
+            <!-- Page content -->
+            <div role="main" class="ui-content">
+
+                <!-- Sign = black page -->
+                <div class="sign"> <!-- div sign -->
+                    <center><img class="display" src="./img/RC-logo.PNG" alt="Clixster"/></center>
+
+                    <br>  
+
+                    <div> 
+                        <input name="txtFName" id="txtFName" placeholder="First Name" type="text">
+                        <input name="txtLName" id="txtLName" placeholder="Last name" type="text">
+                        <input name="txtEmail" id="txtEmail" placeholder="Email" type="email">
+                        <input name="txtPswd" id="txtPswd" placeholder="Password" autocomplete="off" type="password">
+                        <input name="txtConfirmPswd" id="txtConfirmPswd" placeholder="Confirm Password" autocomplete="off" type="password">
+                    </div>
+
+                    <div class="ui-field-contain">
+                        <label>
+                            <input name="cbxTermNCond" id="cbxTermNCond" type="checkbox">I agree with terms and condition
+                        </label>
+                        <br>
+                        <center>
+                            <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline" id="btnSignUp"
+                               style="color:white;background-color:#ed1c24;border:none">Submit</a> <!-- onClick() go submit -->
+                        </center>
+                    </div>  
+                </div> <!-- /sign -->
+
+            </div> <!-- /content -->
+
+        </div><!-- /page -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Signin Page -->
+        <div data-role="page" id="signin_page" class="page">
+
+            <!-- Header -->
+            <div class="ui-header-blk" data-role="header"></div>
+
+            <!-- Page content -->
+            <div role="main" class="ui-content">
+
+                <!-- Sign = black page -->
+                <div class="sign"> <!-- div sign -->
+
+                    <center><img class="display" src="img/RC-logo.PNG" alt="Clixster"/></center>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div>
+                        <input name="txtHpNbr" id="txtHpNbr" placeholder="Phone Number" type="text">
+                        <br>
+                        <input name="txtPassword" id="txtPassword" placeholder="Password" value="" 
+                               autocomplete="off" type="password">
+                        <a href="#forgotPswd_page" style="color:white;text-shadow:none">Forgot Password?</a> <!-- Link to forgot password -->
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div>
+                        <center><a class="ui-btn ui-corner-all ui-shadow ui-btn-inline"  id="btnLogin"
+                                   style="color:white; background-color:#ed1c24; border:none;text-shadow:none">Login</a></center> <!-- onClick() go submit & buang href -->
+                    </div>
+
+                </div> <!-- /sign -->
+            </div> <!-- /content -->
+
+        </div> <!-- /page -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Forgot password page -->
+        <div data-role="page" id="forgotPswd_page">
+
+            <!-- Header -->
+            <div data-role="header">
+
+                <a href="#signin_page" data-icon="back" data-iconpos="notext" style="background-color:red;border-color:white" class="ui-nodisc-icon"></a>
+
+            </div> <!-- /header -->
+
+            <!-- Item menu -->
+            <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Personal Profile</a></li>
+                    <li><a href="#panel-fixed-page2">Credit Balance</a></li>
+                    <li><a href="#panel-fixed-page2">Validity</a></li>
+                    <li><a href="#panel-fixed-page2">Name</a></li>
+                    <li><a href="#panel-fixed-page2">Password</a></li>
+                    <li><a href="#panel-fixed-page2">Email</a></li>
+                </ul>
+            </div><!-- /item menu -->
+
+            <!-- Page content -->
+            <div role="main" class="ui-content">
+
+                <!-- Sign = black page -->
+                <div class="sign"> <!-- div sign -->
+
+                    <br><br>
+                    <center><img class="display" src="img/RC-logo.PNG"/></center>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div>
+                        <label for="forgotEmail" style="color:white;text-shadow:none">Enter email address:</label>
+                        <input data-clear-btn="true" name="forgotEmail" id="forgotEmail" placeholder="Email" value="" type="email">
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div>
+                        <center><a href="#signin_page" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" 
+                                   style="color:white; background-color:#ed1c24;border:none;text-shadow:none">Submit</a> <!-- onClick & buang href -->
+                        </center>
+                    </div>
+
+                </div> <!-- /sign -->
+
+            </div> <!-- /content -->
+
+        </div> <!-- /page -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Categories page -->
+        <div data-role="page" id="categories_page">
+
+            <!-- Header -->
+            <div data-role="header">    
+                <h2 style="text-shadow:none">Categories</h2>
+                <a href="#nav-panel" class="ui-btn ui-nodisc-icon ui-corner-all ui-btn-icon-left ui-icon-myicon ui-btn-icon-notext"></a>
+            </div> <!-- /header -->
+
+            <!-- Menu item -->
+            <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+
+                    <li data-role="list-divider">Menu</li>
+
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <a href="#"><h3>Home</h3></a>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Home</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Categories Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Categories</h3>
+                        <ul data-role="listview">
+                            <li id="cat_fre"><a href="#freebies_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Freebies</a></li>
+                            <li id="cat_ent"><a href="#entertainment_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Entertainment</a></li>
+                            <li id="cat_foo"><a href="#food_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Food &amp; Beverages</a></li>
+                            <li id="cat_lif"><a href="#lifestyle_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Lifestyle</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Order History Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Order History</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Order History</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Personal Profile Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Personal Profile</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Credit Balance</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Validity</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Edit Profile</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Change Password</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Change Email</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Freequently Asked QS Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Frequently Asked Question</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">FAQ</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Guide Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Guide</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Credit Balance</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Terms of Services Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Terms of Service</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none"> Service Terms & Condtions</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Privacy Policy Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Privacy Policy</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Privacy Policy</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                </ul>
+            </div><!-- /menu item -->
+
+            <!-- Page content -->
+            <div role="main" class="ui-content">
+
+                <!-- Sign = black page -->
+                <div class="sign"> <!-- div sign -->
+
+                    <br><br>
+                    <center><img class="display" src="img/RC-logo.PNG" alt="Clixster"/></center>
+
+                    <br>
+                    <br>
+                    <div> <!-- tukar href & freebies -->
+                        <a href="#freebies_page" class="ui-btn" style="color:white; background-color:#333333;text-shadow:none">Freebies</a>
+                        <a href="#food_page" class="ui-btn" style="color:white; background-color:#535353;text-shadow:none">Food and Beverages</a>
+                        <a href="#entertainment_page" class="ui-btn" style="color:white; background-color:#333333;text-shadow:none">Entertainment</a>
+                        <a href="#lifestyle_page" class="ui-btn" style="color:white; background-color:#535353;text-shadow:none">Lifestyle</a>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>  
+
+                </div> <!-- /sign -->
+
+            </div> <!-- /content -->
+
+        </div> <!-- /page -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Category: Freebies Page -->
+        <div data-role="page" id="freebies_page">
+
+            <!-- Menu item -->
+            <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+
+                    <li data-role="list-divider">Menu</li>
+
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <a href="#"><h3>Home</h3></a>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Home</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Categories Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Categories</h3>
+                        <ul data-role="listview">
+                            <li id="cat_fre"><a href="#freebies_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Freebies</a></li>
+                            <li id="cat_ent"><a href="#entertainment_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Entertainment</a></li>
+                            <li id="cat_foo"><a href="#food_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Food &amp; Beverages</a></li>
+                            <li id="cat_lif"><a href="#lifestyle_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Lifestyle</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Order History Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Order History</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Order History</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Personal Profile Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Personal Profile</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Credit Balance</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Validity</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Edit Profile</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Change Password</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Change Email</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Freequently Asked QS Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Frequently Asked Question</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">FAQ</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Guide Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Guide</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Credit Balance</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Terms of Services Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Terms of Service</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none"> Service Terms & Condtions</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Privacy Policy Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Privacy Policy</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Privacy Policy</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                </ul>
+            </div><!-- /menu item -->
+
+            <!-- Page content -->
+            <div role="main" class="ui-content ui-freebies category">
+
+                <a href="#nav-panel" class="ui-btn ui-nodisc-icon ui-corner-all ui-icon-myicon ui-btn-icon-notext ui-btn-inline"></a>
+
+                <center><img class="show" src="img/Freebies-red.png"/></center>
+
+                <center><h2 style="text-shadow:none">Freebies</h2></center>
+
+                <center>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Freebies</a>  
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Special Value</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">QR Bar</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Voucher</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Menu</a>
+                </center>
+
+
+            </div>
+        </div> <!-- /page -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Category: Food Page -->
+        <div data-role="page" id="food_page">
+
+            <!-- Menu item -->
+            <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+
+                    <li data-role="list-divider">Menu</li>
+
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <a href="#"><h3>Home</h3></a>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Home</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Categories Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Categories</h3>
+                        <ul data-role="listview">
+                            <li id="cat_fre"><a href="#freebies_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Freebies</a></li>
+                            <li id="cat_ent"><a href="#entertainment_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Entertainment</a></li>
+                            <li id="cat_foo"><a href="#food_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Food &amp; Beverages</a></li>
+                            <li id="cat_lif"><a href="#lifestyle_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Lifestyle</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Order History Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Order History</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Order History</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Personal Profile Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Personal Profile</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Credit Balance</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Validity</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Edit Profile</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Change Password</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Change Email</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Freequently Asked QS Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Frequently Asked Question</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">FAQ</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Guide Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Guide</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Credit Balance</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Terms of Services Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Terms of Service</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none"> Service Terms & Condtions</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Privacy Policy Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Privacy Policy</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Privacy Policy</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                </ul>
+            </div><!-- /menu item -->
+
+            <!-- Page Content -->
+            <div role="main" class="ui-content ui-food category">
+
+                <a href="#nav-panel" class="ui-btn ui-nodisc-icon ui-corner-all ui-icon-myicon ui-btn-icon-notext ui-btn-inline"></a>
+
+                <center><img class="ui-big-display" src="img/F&B-red.png"/></center>
+                <center><h2 style="text-shadow:none">Food And Beverages</h2></center>
+                <center>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">McDonald</a>  
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">KFC</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Dominos Pizza</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Pizza Hut</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Subway</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Burger King</a>
+                </center>
+
+            </div> <!-- /content -->
+        </div> <!-- /page -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Category: Entertainment Page -->
+        <div data-role="page" id="entertainment_page">
+
+            <!-- Menu item -->
+            <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+
+                    <li data-role="list-divider">Menu</li>
+
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <a href="#"><h3>Home</h3></a>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Home</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Categories Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Categories</h3>
+                        <ul data-role="listview">
+                            <li id="cat_fre"><a href="#freebies_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Freebies</a></li>
+                            <li id="cat_ent"><a href="#entertainment_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Entertainment</a></li>
+                            <li id="cat_foo"><a href="#food_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Food &amp; Beverages</a></li>
+                            <li id="cat_lif"><a href="#lifestyle_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Lifestyle</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Order History Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Order History</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Order History</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Personal Profile Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Personal Profile</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Credit Balance</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Validity</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Edit Profile</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Change Password</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Change Email</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Freequently Asked QS Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Frequently Asked Question</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">FAQ</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Guide Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Guide</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Credit Balance</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Terms of Services Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Terms of Service</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none"> Service Terms & Condtions</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Privacy Policy Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Privacy Policy</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Privacy Policy</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                </ul>
+            </div><!-- /menu item -->
+
+            <!-- Page Content -->
+            <div role="main" class="entertainment ui-content category">
+
+                <a href="#nav-panel" class="ui-btn ui-nodisc-icon ui-corner-all ui-icon-myicon ui-btn-icon-notext ui-btn-inline"></a>
+
+                <center><img class="show" src="img/Entertainment-red.png"/></center>
+                <center><h2 style="text-shadow:none">Entertainment</h2></center>
+
+                <center>   
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Golden Screen Cinema</a>  
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">TGV Cinema</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">MBO Cinema</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Red Box</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Ampang Superbowl Malaysia</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Mega Lane</a>
+                </center>
+
+
+            </div> <!-- /content -->
+
+        </div> <!-- /page -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Category: Lifestyle -->
+        <div data-role="page" id="lifestyle_page">
+
+            <!-- Menu item -->
+            <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+
+                    <li data-role="list-divider">Menu</li>
+
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <a href="#"><h3>Home</h3></a>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Home</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Categories Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Categories</h3>
+                        <ul data-role="listview">
+                            <li id="cat_fre"><a href="#freebies_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Freebies</a></li>
+                            <li id="cat_ent"><a href="#entertainment_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Entertainment</a></li>
+                            <li id="cat_foo"><a href="#food_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Food &amp; Beverages</a></li>
+                            <li id="cat_lif"><a href="#lifestyle_page" 
+                                                style="color:white; background-color:#ed1c24;text-shadow:none">Lifestyle</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Order History Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Order History</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Order History</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Personal Profile Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Personal Profile</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Credit Balance</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Validity</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Edit Profile</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Change Password</a></li>
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Change Email</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Freequently Asked QS Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Frequently Asked Question</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">FAQ</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Guide Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Guide</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Credit Balance</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Terms of Services Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Terms of Service</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none"> Service Terms & Condtions</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                    <!-- Privacy Policy Collapsible -->
+                    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                        <h3>Privacy Policy</h3>
+                        <ul data-role="listview">
+                            <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Privacy Policy</a></li>
+                        </ul>
+                    </li><!-- /collapsible -->
+
+                </ul>
+            </div><!-- /menu item -->
+
+            <!-- Page content -->
+            <div role="main" class="ui-content lifestyle category">
+
+                <a href="#nav-panel" class="ui-btn ui-nodisc-icon ui-corner-all ui-icon-myicon ui-btn-icon-notext ui-btn-inline"></a>
+
+                <center><img class="ui-life" src="img/Lifestyle-red.png"/></center>
+
+                <center><h2 style="text-shadow:none">Lifestyle</h2></center>
+
+                <center>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Fitness First</a>  
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">Fitness Concept</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">LifeCare</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">London Weight Management</a>
+                    <a href="#" class="ui-btn ui-btn-inline" style="color:#ed1c24; background-color:white">New York Skin Solutions</a>
+                </center>
+
+            </div> <!-- /content -->
+
+        </div> <!-- /page -->
+
+    </body>
+</html>

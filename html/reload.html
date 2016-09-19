@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Reload</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../js/jquery.mobile-1.4.3.min.css" />
+    <link rel="stylesheet" href="../css/stylesheet.css" />
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.3.min.js"></script>
+
+</head>
+     
+<body>
+    <div data-url="panel-fixed-page1" data-role="page" id="panel-fixed-page1">
+        
+     <div data-role="header" data-position="right" text-position="center">    
+         <h2 style="text-shadow:none;font-family:'Segoe UI'">RELOAD</h2>
+         <a href="#nav-panel" class="ui-btn ui-nodisc-icon ui-corner-all ui-icon-myicon ui-btn-icon-notext ui-btn-inline"></a>
+    </div>
+        
+<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="b" id="nav-panel">
+            <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+            <li data-role="list-divider">Menu</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Home</h3>
+                <ul data-role="listview">
+                <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Home</a></li>
+                </ul>
+            </li><!-- /collapsible -->
+                
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Categories</h3>
+              <ul data-role="listview">
+               <li id="cat_fre"><a href="../html/freebies.html" style="color:white; background-color:#ed1c24;text-shadow:none">Freebies</a></li>
+                <li id="cat_ent"><a href="../html/ent.html" style="color:white; background-color:#ed1c24;text-shadow:none">Entertainment</a></li>
+                <li id="cat_foo"><a href="../html/food.html" style="color:white; background-color:#ed1c24;text-shadow:none">Food &amp; Beverages</a></li>
+                <li id="cat_lif"><a href="../html/life.html" style="color:white; background-color:#ed1c24;text-shadow:none">Lifestyle</a></li>
+                <li id="cat_lif"><a href="../html/sport.html" style="color:white; background-color:#ed1c24;text-shadow:none">Sport</a></li>
+              </ul>
+            </li><!-- /collapsible -->
+                
+	<li data-role="collapsible" data-inset="false" data-iconpos="right">
+              	<h3>Order History</h3>
+                <ul data-role="listview">
+                <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Order History</a></li>
+                </ul>
+            	</li><!-- /collapsible -->
+
+    <li data-role="collapsible" data-inset="false" data-iconpos="right">
+        <h3>Personal Profile</h3>
+            <ul data-role="listview">
+                <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Profile</a></li>
+                <li><a href="../html/checkno.html" style="color:white; background-color:#ef3f61;text-shadow:none">View Profile</a></li>
+                <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Account</a>
+                    <ul data-role="listview">
+                        <li style="color:white; background-color:#ef3f61;text-shadow:none">E-Wallet</li>
+                    </ul>
+                </li>
+            </ul>
+        </li><!-- /collapsible -->
+
+	       <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              	<h3>Frequently Asked Question</h3>
+               <ul data-role="listview">
+                <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Frequently Asked Question</a></li>
+                </ul>
+            	</li><!-- /collapsible -->
+
+	       <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              	<h3>Guide</h3>
+               <ul data-role="listview">
+                <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Guide</a></li>
+                </ul>
+            </li><!-- /collapsible -->
+
+	       <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              	<h3>Terms of Service</h3>
+               <ul data-role="listview">
+                <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Terms of Services</a></li>
+                </ul>
+            	</li><!-- /collapsible -->
+
+	       <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              	<h3>Privacy Policy</h3>
+                <ul data-role="listview">
+                <li><a href="#" style="color:white; background-color:#ed1c24;text-shadow:none">Privacy Policy</a></li>
+                </ul>
+            	</li><!-- /collapsible -->
+        </ul>
+    </div><!-- /panel -->
+
+    <div role="main" class="ui-content">
+    <center><img class="display" src="../images/Red-Carpet-logo.png" alt="Clixster"/></center>
+        <br>
+        <div data-iconpos="right">
+        <label style="color:white; background-color:#333333">
+        <input name="radio-choice-0" id="radio-choice-0a" type="radio" >RM5
+        </label>
+    
+        <label for="radio-choice-0b" style="color:white; background-color:#535353">RM10</label>
+        <input name="radio-choice-0" id="radio-choice-0b" class="custom" type="radio">
+    
+        <label style="color:white; background-color:#333333">
+        <input name="radio-choice-0" id="radio-choice-0c" type="radio">RM30
+        </label>
+        
+        <label for="radio-choice-0d"style="color:white; background-color:#535353">RM50</label>
+        <input name="radio-choice-0" id="radio-choice-0d" class="custom" type="radio">
+    
+        <center><a href="dmenu.html" data-transition="none" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="color:#ed1c24; background-color:white; border:none;text-shadow:none;font-family:'Segoe UI'">TOPUP</a></center>   
+    </div>
+    </div>
+</body>
+</html>

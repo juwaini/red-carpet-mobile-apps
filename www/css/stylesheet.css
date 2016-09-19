@@ -1,0 +1,243 @@
+/* Adjust the width of the left reveal menu. */
+#demo-page #left-panel.ui-panel {
+    width: 15em;
+}
+#demo-page #left-panel.ui-panel-closed {
+    width: 0;
+}
+#demo-page .ui-panel-page-content-position-left,
+.ui-panel-dismiss-open.ui-panel-dismiss-position-left {
+    left: 15em;
+    right: -15em;
+}
+#demo-page .ui-panel-animate.ui-panel-page-content-position-left.ui-panel-page-content-display-reveal {
+    left: 0;
+    right: 0;
+    -webkit-transform: translate3d(15em,0,0);
+    -moz-transform: translate3d(15em,0,0);
+    transform: translate3d(15em,0,0);
+}
+/* Listview with collapsible list items. */
+.ui-listview > li .ui-collapsible-heading {
+    margin: 0;
+}
+.ui-collapsible.ui-li-static {
+    padding: 0;
+    border: none !important;
+}
+.ui-collapsible + .ui-collapsible > .ui-collapsible-heading > .ui-btn {
+    border-top: none !important;
+}
+/* Nested list button colors */
+.ui-listview .ui-listview .ui-btn {
+    background: #fff;
+}
+.ui-listview .ui-listview .ui-btn:hover {
+    background: #f5f5f5;
+}
+.ui-listview .ui-listview .ui-btn:active {
+    background: #f1f1f1;
+}
+/* Reveal panel shadow on top of the listview menu (only to be used if you don't use fixed toolbars) */
+#demo-page .ui-panel-display-reveal {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+#demo-page .ui-panel-page-content-position-left {
+    -webkit-box-shadow: -5px 0px 5px rgba(0,0,0,.15);
+    -moz-box-shadow: -5px 0px 5px rgba(0,0,0,.15);
+    box-shadow: -5px 0px 5px rgba(0,0,0,.15);
+}
+
+div .ui-freebies 
+{
+    background-image: url(../img/free.PNG);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+    font-family: 'Segoe UI Light';
+}
+
+div .ui-food
+{
+    background-image: url(../img/food.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+    font-family: 'Segoe UI Light';
+}
+
+div .entertainment 
+{
+    background-image: url(../img/entertainment.png);
+    background-repeat: no-repeat;
+    webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+    font-family: 'Segoe UI Light';
+}
+
+
+div .lifestyle 
+{
+    background-image: url(../img/lifestyle.png);
+    background-repeat: no-repeat;
+    webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+    font-family: 'Segoe UI Light';
+}
+
+div .ui-content
+{
+    background-color: #bc1e24;
+    position: absolute;
+    top:45px;
+    right: 0;
+    bottom: 0;
+    left: 0;  
+}
+
+div .sign 
+{
+    background-color: #333333; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+}
+
+center .no-shadow
+{
+    text-shadow: none;
+    height: 7em;
+    width: 20em; 
+}
+
+.ui-page
+{
+    height: 100%
+}
+
+.ui-page .ui-header 
+{
+    background: #bc1e24;
+    height: 45px;
+}
+
+.ui-page .ui-header-blk
+{
+
+    background: #333333;
+}
+
+.ui-page .transparent-header
+{
+    background: none;
+}
+
+.ui-page .category
+{
+    background-color: none; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+}
+
+
+h2 
+{
+    color: white;
+    font-size: 48px;
+    font-family: serif;
+}
+
+h1 
+{
+    color: white;
+    font-size: 48px;
+    font-family: serif;
+}
+
+p span 
+{
+    color: white;
+    font-size: 20px;
+    font-family: serif;
+}
+
+center img.ui-display 
+{
+    height: 8em;
+    width: 20em;  
+}
+
+center img.display 
+{
+    height: 5em;
+    width: 15em;  
+}
+
+center img.ui-big-display
+{
+    height: 7em;
+    width: 7em;
+}
+
+div center img.ui-food
+{
+    height: 13em;
+    width: 15em;  
+}
+
+center img.show 
+{
+    height: 7em;
+    width: 7em;  
+}
+
+center img.ui-life 
+{
+    height: 7em;
+    width: 7em;  
+}
+
+center h2 
+{
+    font-size: 42pt;
+    font-weight: 900;
+    color: #ef0632; 
+    text-align: center;
+}
+
+.ui-icon-myicon 
+{
+    background-image: url("../img/menu.png");
+    width:30px !important;
+    height: 30px !important;
+    background-size: 30px 30px !important;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    box-shadow: none;
+}
+.ui-nodisc-icon
+{
+    width:30px !important;
+    height: 30px !important;
+    background-size: 30px 30px !important;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    box-shadow: none;
+}
